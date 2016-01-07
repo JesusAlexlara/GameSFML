@@ -1,0 +1,57 @@
+# Project: SFML_Test
+# Makefile created by Dev-C++ 5.11
+
+# This Makefile is written for syntax check!
+# Regenerate it if you want to use this Makefile to build.
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o ScreenManager.o SplashScreen.o TitleScreen.o InputManager.o Animation.o Star.o Random.o FileManager.o GameScreen.o
+LINKOBJ  = main.o ScreenManager.o SplashScreen.o TitleScreen.o InputManager.o Animation.o Star.o Random.o FileManager.o GameScreen.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/SFML64-2.3.2/lib" -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-system -lsfml-window
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/SFML64-2.3.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/SFML64-2.3.2/include" -I"C:/SFML64-2.3.2/include"
+BIN      = SFML_Test.exe
+CXXFLAGS = $(CXXINCS) -fsyntax-only -std=c++11
+CFLAGS   = $(INCS) -fsyntax-only -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom $(OBJ) $(BIN)
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp $(CXXFLAGS)
+
+ScreenManager.o: ScreenManager.cpp
+	$(CPP) -c ScreenManager.cpp $(CXXFLAGS)
+
+SplashScreen.o: SplashScreen.cpp
+	$(CPP) -c SplashScreen.cpp $(CXXFLAGS)
+
+TitleScreen.o: TitleScreen.cpp
+	$(CPP) -c TitleScreen.cpp $(CXXFLAGS)
+
+InputManager.o: InputManager.cpp
+	$(CPP) -c InputManager.cpp $(CXXFLAGS)
+
+Animation.o: Animation.cpp
+	$(CPP) -c Animation.cpp $(CXXFLAGS)
+
+Star.o: Star.cpp
+	$(CPP) -c Star.cpp $(CXXFLAGS)
+
+Random.o: Random.cpp
+	$(CPP) -c Random.cpp $(CXXFLAGS)
+
+FileManager.o: FileManager.cpp
+	$(CPP) -c FileManager.cpp $(CXXFLAGS)
+
+GameScreen.o: GameScreen.cpp
+	$(CPP) -c GameScreen.cpp $(CXXFLAGS)

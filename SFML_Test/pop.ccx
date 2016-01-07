@@ -1,0 +1,6 @@
+load=[image]
+[load/image]
+[load/image]
+
+loadPosition = [position][alpha]
+[20 20][1]
